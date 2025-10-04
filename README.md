@@ -26,3 +26,11 @@ Créer une application web (PWA) intelligente et simple d’utilisation qui aide
 ---
 
 ## 📁 Structure du projet
+
+/docs         → Vision produit, stories, roadmap
+/app-spec     → Spécifications fonctionnelles et design
+/models       → Schéma Firestore (base de données)
+/dev          → Configuration et règles de sécurité
+/prompts      → Instructions pour Devin AI
+
+
