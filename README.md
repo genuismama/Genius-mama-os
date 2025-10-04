@@ -33,4 +33,21 @@ Créer une application web (PWA) intelligente et simple d’utilisation qui aide
 /dev          → Configuration et règles de sécurité
 /prompts      → Instructions pour Devin AI
 
+---
+
+## 🚀 Démarrage du projet
+```bash
+# 1) Cloner le repo
+git clone https://github.com/<ton-compte>/Genius-mama-os.git
+cd Genius-mama-os
+
+# 2) Créer le fichier .env.local
+cp dev/env.example .env.local
+
+# 3) Installer les dépendances
+npm install
+
+# 4) Lancer le serveur local
+npm run dev
+
 
