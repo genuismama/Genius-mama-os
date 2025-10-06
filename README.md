@@ -5,95 +5,90 @@ Design haut de gamme (noir, beige, doré, bleu foncé) et expérience zen.
 
 ---
 
-## 🎯 Objectif du projet
-Créer une application web (PWA) intelligente et simple d’utilisation qui aide les mamans à :
-- Se recentrer sur leur bien-être (Zen Mama)
-- Suivre leur bébé (sommeil, alimentation, couches)
-- Gérer les tâches familiales (Planning)
-- Simplifier la gestion financière (Budget)
-- Entretenir la complicité de couple (Mon Couple)
-- Découvrir des produits utiles et responsables (Marketplace)
+## 🎯 Objectif
+Créer une application web (PWA) intelligente et simple qui aide les mamans à :
+- Se recentrer sur leur bien-être (**Zen Mama**)
+- Suivre leur bébé (sommeil, alimentation, couches) (**Mon Bébé**)
+- Gérer les tâches familiales (**Planning**)
+- Simplifier la gestion financière (**Budget**)
+- Entretenir la complicité de couple (**Mon Couple**)
+- Découvrir des produits utiles et responsables (**Marketplace**)
 
 ---
 
 ## ⚙️ Stack technique
-- **Next.js** (App Router)  
-- **TailwindCSS**  
-- **Firebase Auth + Firestore**  
-- **next-intl** (bilingue FR/EN)  
-- **Vercel** pour le déploiement
+- **Next.js (App Router)**
+- **TypeScript**
+- **Tailwind CSS + shadcn/ui**
+- **next-intl (FR/EN)**
+- **Firebase Auth + Firestore**
+- **Déploiement : Vercel**
 
 ---
 
-## 📁 Structure du projet
+## 📁 Structure
 
-/docs         → Vision produit, stories, roadmap
-/app-spec     → Spécifications fonctionnelles et design
-/models       → Schéma Firestore (base de données)
-/dev          → Configuration et règles de sécurité
-/prompts      → Instructions pour Devin AI
+/docs → Vision produit, user stories, roadmap  
+/app-spec → Spécifications fonctionnelles et design  
+/models → Schéma Firestore (base de données)  
+/dev → Config & règles de sécurité  
+/prompts → Instructions IA de développement (ex.: Devin)  
+/web → (créé lors du bootstrap Next.js) code de l’app  
 
 ---
 
-## 🚀 Démarrage du projet
+## 🚀 Démarrage (local)
 ```bash
-# 1) Cloner le repo
-git clone https://github.com/<ton-compte>/Genius-mama-os.git
-cd Genius-mama-os
-
-# 2) Créer le fichier .env.local
-cp dev/env.example .env.local
-
-# 3) Installer les dépendances
+# À la racine du repo
+npx create-next-app@latest web --typescript --eslint --tailwind --app --src-dir --import-alias "@/*" --use-npm
+cd web
 npm install
-
-# 4) Lancer le serveur local
 npm run dev
 
-🔐 Sécurité Firestore
 
-Les règles (dev/firebase.rules) empêchent tout accès croisé entre utilisateurs.
-Chaque compte lit/écrit uniquement ses propres données (users/{uid}/...).
-
-⸻
+🔐 Sécurité Firestore (à venir)
+Les règles (ex.: dev/firebase.rules) empêcheront tout accès croisé entre utilisateurs :
+chaque compte lit/écrit uniquement ses propres données (users/{uid}/...).
 
 🌎 Internationalisation
+Toutes les chaînes seront gérées via next-intl, avec support complet FR/EN.
 
-Toutes les chaînes sont gérées via next-intl, avec support complet FR/EN.
-
-⸻
-
-📆 Roadmap
-
+🗺️ Roadmap (extrait)
 Semaine 1 → Auth + i18n + Dashboard
 Semaine 2 → Zen Mama + Mon Bébé
 Semaine 3 → Planning + Budget
 Semaine 4 → UI finale + Déploiement Vercel
 
-⸻
-
-👩‍💻 Auteur
-
-Cynthia Després
-Fondatrice de Genius Mama OS
-📧 cynthiadespres@hotmail.com
-📍 Québec, Canada
-
+👩‍💻 Auteure
+Cynthia Després — Fondatrice de Genius Mama OS
+📧 cynthiadespres@hotmail.com — 📍 Québec, Canada
 “Créer un univers où chaque maman retrouve équilibre, clarté et puissance intérieure.” 💫
 
+Notes
+Ce dépôt contient la vision et les spécifications.
+Le code applicatif vit dans /web (Next.js).
+Les modules principaux : Zen Mama, Mon Bébé, Planning, Mon Couple, Budget, Marketplace.
+
+(Option) Mettre en place l’UI premium
+Depuis /web :npx shadcn-ui@latest init -y
+npm i class-variance-authority tailwind-merge lucide-react zustand zod date-fns next-intl
+
+(Option) Déploiement Vercel
+Connecter le repo à Vercel
+Ajouter les variables d’env (Firebase, i18n)
+Déployer la branche main
+
 ---
 
-🩵 **Étape finale :**
-1. Va dans ton dépôt **Genius-mama-os**  
-2. Clique sur **README.md**  
-3. Appuie sur **✏️ (le crayon)**  
-4. Supprime le texte actuel  
-5. Colle **tout le texte ci-dessus**  
-6. Clique sur **Commit changes (bouton vert)**  
+### ✅ En résumé
+✔️ Ton texte est juste  
+✔️ Ton contenu est complet  
+✔️ Et ta structure est déjà au niveau d’un **projet tech bien monté**
 
 ---
 
-Quand ce sera fait, reviens ici et dis :  
-> ✅ C’est fait  
+Souhaites-tu que je t’aide maintenant à :
+> créer la base Next.js (`/web`) et le **menu principal avec les 6 modules** dans ton app Genius Mama OS ?  
+(on peut tout générer automatiquement en 1 commande)
 
-Et je t’expliquerai **comment connecter ton dépôt à Devin AI** pour que l’IA commence à coder ton application automatiquement 🚀
+
